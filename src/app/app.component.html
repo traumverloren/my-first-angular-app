@@ -2,6 +2,16 @@
 <div class="row">
   <div class="col-sm-12">
     <h2>I'm in the app component!</h2>
+    <form>
+      <label>Username: </label>
+      <input  type="text" name="username" [(ngModel)]="username">
+      <button class="btn btn-danger" [disabled]="!username" type="button" name="button" (click)="clearInput()">Clear User</button>
+    </form>
+    <div *ngIf="username">
+      <hr/>
+      <h5>Hi {{username}}!</h5>
+      <hr/>
+    </div>
     <warning-alert></warning-alert>
     <success-alert></success-alert>
   </div>
