@@ -1,0 +1,12 @@
+<h5>Assignment 3: Intro to Directives</h5>
+
+<button type="button" name="button" class="btn" (click)="toggleDetails()">Display Details</button>
+
+<p>Click Count:</p>
+<div *ngFor="let click of clicks">
+  <span [ngStyle]="{backgroundColor: setColor(click)}" [ngClass]="{manyItems: click > 4}">
+    {{click}}
+  </span>
+</div>
+<br/>
+<p *ngIf="isDisplayed">Secret Password = Wilbur</p>
