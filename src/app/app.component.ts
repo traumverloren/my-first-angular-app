@@ -6,9 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  username: string;
+  evens: number[] = [];
+  odds: number[] = [];
 
-  clearInput() {
-    this.username = ""
+  onIncrement(count: number) {
+    count % 2 === 0 ? this.evens.push(count) : this.odds.push(count)
   }
+
+  // username: string;
+  //
+  // clearInput() {
+  //   this.username = ""
+  // }
 }
